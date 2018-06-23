@@ -12,18 +12,19 @@
             <h6><strong>RECORD LABEL</strong>: {{release.label}}</h6>
             <h6><strong>CATALOG NBR</strong>: {{release.labelNumber}}</h6>
             <h6 class="d-flex align-items-center"><strong>ARTISTS</strong><a href="/releases/{{release.id}}/artists/new"><button class="btn btn-mini-add" type="submit">+</button></a></h6>
-            <div>
-                {{#each artists}}
+            {{#each artists}}
+                <div class="d-flex justify-content-between align-items-center deleteable">
                     <a class="d-flex justify-content-start align-items-center" href="/artists/{{id}}">
                         <div class="artist-thumbnail"><img src="{{imageUrl}}"></div>
-                        <h2>{{name}}</h2>
+                        <h3>{{name}}</h3>
                     </a>
-                {{/each}}
-            </div>
+                    <a href="#remove-artist"><button class="btn btn-mini-delete" type="submit">X</button></a>
+                </div>
+            {{/each}}
             <h3>Tracks</h3>
             <ol class="track-list">
                 {{#each tracks}}
-                    <li>
+                    <li class="deleteable">
                         <span class="d-flex justify-content-between align-items-center">
                             {{title}}
                             <a href="/tracks/{{id}}/delete"><button class="btn btn-mini-delete" type="submit">X</button></a>
@@ -56,7 +57,7 @@
             <h6>Price: ${{dollarPrice}}</h6>
             <h4>Notes</h4>
             {{#each notes}}
-                <p>
+                <p class="deleteable">
                     <span class="d-flex justify-content-between">
                         {{formattedCreatedAt}}: {{content}}
                         <a href="/notes/{{id}}/delete"><button class="btn btn-mini-delete" type="submit">X</button></a>
@@ -90,18 +91,19 @@
             <h6><strong>RECORD LABEL</strong>: {{release.label}}</h6>
             <h6><strong>CATALOG NBR</strong>: {{release.labelNumber}}</h6>
             <h6 class="d-flex align-items-center"><strong>ARTISTS</strong><a href="#add-artist-to-record"><button class="btn btn-mini-add" type="submit">+</button></a></h6>
-            <div>
-                {{#each artists}}
+            {{#each artists}}
+                <div class="d-flex justify-content-between align-items-center deleteable">
                     <a class="d-flex justify-content-start align-items-center" href="/artists/{{id}}">
                         <div class="artist-thumbnail"><img src="{{imageUrl}}"></div>
-                        <h2>{{name}}</h2>
+                        <h3>{{name}}</h3>
                     </a>
-                {{/each}}
-            </div>
+                    <a href="#remove-artist"><button class="btn btn-mini-delete" type="submit">X</button></a>
+                </div>
+            {{/each}}
             <h3>Tracks</h3>
             <ol class="track-list">
                 {{#each tracks}}
-                    <li>
+                    <li class="deleteable">
                         <span class="d-flex justify-content-between align-items-center">
                             {{title}}
                             <a href="/tracks/{{id}}/delete"><button class="btn btn-mini-delete" type="submit">X</button></a>
@@ -128,7 +130,7 @@
             </div>
             <h4>Notes</h4>
             {{#each notes}}
-                <p>
+                <p class="deleteable">
                     <span class="d-flex justify-content-between">
                         {{formattedCreatedAt}}: {{content}}
                         <a href="/notes/{{id}}/delete"><button class="btn btn-mini-delete" type="submit">X</button></a>
