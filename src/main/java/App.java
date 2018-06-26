@@ -28,8 +28,8 @@ public class App {
     public static void main(String[] args) {
         port(getHerokuAssignedPort());
         staticFileLocation("/public");
-        String connectionString = "jdbc:postgresql://localhost:5432/cratedigger";
-        Sql2o sql2o = new Sql2o(connectionString, null, null);
+        String connectionString = "jdbc:postgresql://ec2-184-73-240-228.compute-1.amazonaws.com:5432/d8u5ve7sie166v";
+        Sql2o sql2o = new Sql2o(connectionString, "dxoqknjrqurxwz", "b812dc49ee86d62171f507a9c4503fb0020edd9685210979f7106a5a27c33e14");
         Sql2oReleaseDao releaseDao = new Sql2oReleaseDao(sql2o);
         Sql2oArtistDao artistDao = new Sql2oArtistDao(sql2o);
         Sql2oNoteDao noteDao = new Sql2oNoteDao(sql2o);
