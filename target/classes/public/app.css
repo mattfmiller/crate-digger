@@ -1,122 +1,14 @@
-/* Sidebar */
-
-.sidebar {
-  background-color: #dedbce;
-  width: 300px;
-  min-width: 300px;
-  border-right: 10px solid #86b9b8;
-  height: 100vh;
-  min-height: 1000px;
-  position: relative;
-}
-
-.logo {
-  display: block;
-  margin: auto;
-  padding: 25px 0;
-}
-
-.logo img {
-  width: 100px;
-  height: 100px;
-}
-
-.logo h1 {
-  margin: 0;
-}
-
-.user-profile {
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-.user-profile img {
-  display: block;
-  margin: 0 auto 25px;
-  width: 200px;
-  border-radius: 10px;
-}
-
-.collection-overview {
-  text-align: center;
-  background-color: #86b9b8;
-  padding: 25px;
-}
-
-.collection-overview p {
-  margin: 3px;
-}
-
-.crate-mates {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-.crate-mates-images {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin: 10px 50px 50px;
-}
-
-.crate-mates-images img {
-  width: 60px;
-  height: 60px;
-  border-radius: 5px;
-  display: block;
-  margin: 2px auto;
-}
-
-/* Navbar */
-
-.navbar a {
-  color: #e66a55;
-}
-
-.navbar h3 {
-  font-weight: normal;
-  margin: 0;
-}
-
-.btn-red {
-  background-color: #e66a55;
-  color: white;
-}
-
-.btn-blue {
-  background-color: #86b9b8;
-  color: white;
-}
-
-.btn:focus {
-  box-shadow: none;
-}
-
-.navbar .btn:hover {
-  opacity: .7;
-}
-
-/* Collection Grid */
-
-.collection-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 50px;
-  margin: 50px auto;
-  width: 1000px;
-}
-
-.collection-grid img {
-  background-color: lightgray;
-  width: 300px;
-  border-radius: 10px;
-}
-
-/* Album Details */
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700');
 
+html, body {
+  height: 100%;
+  min-width: 860px;
+  font-size: 100%;
+  word-wrap: break-word;
+}
+
 h1, h2, h3, h4, h5 ,h6 {
-  margin: 20px 0;
+  margin: 10px 0 20px;
 }
 
 h1 {
@@ -131,120 +23,349 @@ h1.page-title {
   text-transform: uppercase;
 }
 
-li {
-  margin-bottom: 15px;
+a, a:hover {
+  color: #ff6372;
+  text-decoration: none;
 }
 
-.container {
-  padding-top: 50px;
+button {
+  cursor: pointer;
 }
 
-.btn-edit {
-  height: 30px;
-  background-color: #88b9b8;
-  color: #fff;
-  font-size: 0.75rem;
+/* UI Dashboard */
+
+#ui-dashboard {
+  height: 100%;
+}
+
+/* UI Dashboard - Sidebar */
+
+.sidebar {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-right: 10px solid #88b9b8;
+  background: linear-gradient(to top, #d5efef, #76a9a8);
+  overflow: hidden;
+}
+
+.logo {
+  width: 250px;
+  display: block;
+  margin: 25px auto;
+}
+
+.logo a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.user-profile {
+  margin: 50px 30px;
+  border-top-left-radius: 115px;
+  border-top-right-radius: 115px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #fff9;
+  text-align: center;
+}
+
+.profile-img {
+  width: 230px;
+  display: block;
+  margin: 25px auto;
+  border-radius: 100%;
+}
+
+.collection-overview {
+  padding: 25px;
+  text-align: center;
+}
+
+.collection-overview p {
+  margin-bottom: 3px;
+}
+
+.crate-mates {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.crate-mates-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  padding: 10px 30px 30px;
+}
+
+.crate-mates-images img {
+  width: 100%;
+  border-radius: 100%;
+}
+
+#display-record {
+  width: 830px;
+  position: absolute;
+  left: -270px;
+  bottom: -500px;
+  z-index: -10;
+}
+
+/* UI Dashboard - Navbar */
+
+.navbar {
+  min-width: 860px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 20px 0 50px;
+  padding: 0 20px 0 320px;
+  z-index: 10;
+}
+
+.navbar a {
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 5px;
+  outline: none;
   text-transform: uppercase;
 }
 
-.detail-cover-image {
-  height: 550px;
-  width: 550px;
-  margin: 20px 0;
+.button-primary {
+  background-color: #ff6372;
+  color: #fff;
+}
+
+.button-blue {
+  background-color: #88b9b8;
+  color: #fff;
+}
+
+.button-hollow {
+  border: 1px solid #88b9b8;
+  background-color: #fff;
+  color: #88b9b8;
+}
+
+.button-blue:hover, .button-primary:hover  {
+  color: #fff;
+}
+
+.button-hollow:hover {
+  color: #88b9b8;
+}
+
+/* Main Content */
+
+.main {
+  min-height: 100%;
+  padding: 70px 50px 50px;
+  margin-left: 300px;
+}
+
+/* Collection Grid */
+
+#search-filters {
+  flex-direction: column;
+  justify-content: center;
+}
+
+#search-artists {
+  width: 100%
+}
+
+#search-filters button {
+  margin: 0 3px;
+}
+
+#search-filters .btn-submit, #search-artists .btn-submit {
+  margin: 0 0 0 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  #search-filters {
+    flex-direction: row;
+  }
+
+  #search-artists {
+    width: auto;
+  }
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
+  width: 100%;
+  margin: 0 auto 25px;
+}
+
+.collection-grid p {
+  margin: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .collection-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .collection-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.collection-grid img {
+  width: 100%;
+}
+
+.collection-grid .album, .collection-grid .artist {
+  position: relative;
+  width: 100%;
+  box-shadow: 0 10px 20px -5px #3339;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.overlay {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+}
+
+.album .overlay {
+  width: 96%;
+  height: 96%;
+  margin: 2%;
+  border-radius: 50%;
+}
+
+.album:hover .overlay, .artist:hover .overlay {
+  visibility: visible;
+}
+
+/* Details */
+
+.detail-main-panel {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+}
+
+.detail-main-panel h2 {
+  margin: 10px 0;
+}
+
+.detail-cover-image img{
+  width: 100%;
+  border-radius: 5px;
+}
+
+.cratemate-social-heading {
+  font-size: 0.85rem;
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+.cratemate-thumbnail {
+  height: 50px;
+  width: 50px;
+  margin-left: 5px;
+}
+
+.cratemate-thumbnail img{
+  width: 100%;
   border-radius: 10px;
-  background-color: lightgray;
+}
+
+/* Details - Album */
+
+.track-list {
+  padding-left: 30px;
+}
+
+.track-list li {
+  margin-bottom: 15px;
+}
+
+.btn-edit, .btn-delete, .btn-mini-delete, .btn-mini-add, .btn-collection {
+  height: 30px;
+  color: #fff;
+  font-size: 0.75rem;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.btn-edit {
+   background-color: #88b9b8;
+}
+
+.btn-delete {
+  margin-right: 10px;
+  background-color: #666;
+}
+
+.btn-mini-delete {
+  opacity: 0;
+  height: 20px;
+  margin-left: 10px;
+  padding: 0 5px;
+  background-color: #ff6372;
+}
+
+.btn-mini-add {
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+  padding: 0;
+  background-color: #88b9b8;
+}
+
+.btn-collection {
+  margin-left: 10px;
+  background-color: #ff6372;
+}
+
+p:hover .btn-mini-delete, li:hover .btn-mini-delete {
+  opacity: 1;
 }
 
 .artist-thumbnail {
   height: 60px;
   width: 60px;
   margin-right: 20px;
-  border-radius: 10px;
-  background-color: lightgray;
 }
 
-.cratemate-social-heading {
-  font-size: 0.85rem;
-  font-weight: normal;
+.artist-thumbnail img {
+  width: 100%;
+  border-radius: 10px;
 }
 
 /* Artist Details */
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700');
-
-h1, h2, h3, h4, h5 ,h6 {
-  margin: 20px 0;
-}
-
-h1 {
-  font-family: 'Lato', sans-serif;
-  font-weight: bold;
-  font-size: 2.15rem;
-}
-
-h1.page-title {
-  color: #88b9b8;
-  font-size: 2.25rem;
-  text-transform: uppercase;
-}
-
-.container {
-  padding-top: 50px;
-}
-
-.detail-cover-image {
-  height: 550px;
-  width: 550px;
-  margin: 20px 0;
-  border-radius: 10px;
-  background-color: lightgray;
-}
 
 .album-thumbnail {
-  height: 225px;
-  width: 225px;
+  width: 100%;
   margin-right: 20px;
   border-radius: 10px;
   background-color: lightgray;
 }
 
-.cratemate-social-heading {
-  font-size: 0.85rem;
-  font-weight: normal;
-}
+/* Release Form */
 
-.cratemate-thumbnail {
-  height: 50px;
-  width: 50px;
-  margin: 0 5px;
-  border-radius: 10px;
-  background-color: lightgray;
-}
-
-.cratemate-thumbnail {
-  height: 50px;
-  width: 50px;
-  margin: 0 5px;
-  border-radius: 10px;
-  background-color: lightgray;
-}
-
-/* Release form */
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700');
-
-h1, h2, h3, h4, h5 ,h6 {
-  margin: 20px 0;
-}
-
-h1 {
-  font-family: 'Lato', sans-serif;
-  font-weight: bold;
-  font-size: 2.15rem;
-}
-
-h1.page-title {
-  color: #88b9b8;
-  font-size: 2.25rem;
-  text-transform: uppercase;
+.form-container {
+  min-width: 500px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 label {
@@ -255,10 +376,6 @@ form button {
   margin: 0 10px;
   color: #fff;
   text-transform: uppercase;
-}
-
-.container {
-  padding-top: 50px;
 }
 
 .form-group, .input-group{
@@ -273,18 +390,14 @@ form button {
   width: 48%;
 }
 
+.date-input {
+  height: 38px;
+}
+
 .btn-cancel {
   background-color: #e46b59;
 }
 
 .btn-submit {
   background-color: #88b9b8;
-}
-
-.preview-image {
-  height: 270px;
-  width: 270px;
-  margin: 20px auto;
-  border-radius: 10px;
-  background-color: lightgray;
 }

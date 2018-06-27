@@ -1,13 +1,28 @@
 {{#partial "content"}}
 
-
-
+<h1 class="page-title text-center">Artists</h1>
+<div class="d-flex justify-content-end">
+    <form id="search-artists">
+        <div class="form-group d-flex">
+            <form action="/releases" method="get">
+                <input class="form-control" type="text" name="query">
+                <button class="btn btn-submit" type="submit">Search</button>
+            </form>
+        </div>
+    </form>
+</div>
 <div class="collection-grid">
     {{#each artists}}
-        <img src="{{imageUrl}}">
+        <div class="artist">
+            <a href="/artists/{{id}}">
+                <img src="{{imageUrl}}">
+                <div class="overlay d-flex justify-content-center align-items-center">
+                    <h4>{{name}}</h4>
+                </div>
+            </a>
+        </div>
     {{/each}}
 </div>
-
 
 {{/partial}}
 

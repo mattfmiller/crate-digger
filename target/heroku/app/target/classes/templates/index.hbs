@@ -1,0 +1,22 @@
+{{#partial "content"}}
+
+<h1 class="page-title text-center">New Additions</h1>
+<div class="collection-grid">
+    {{#each releasesWithArtists}}
+        <div class="album">
+            <a href="/releases/{{@key.id}}">
+                <img src="{{@key.imageUrl}}">
+                <div class="overlay d-flex justify-content-center align-items-center flex-column">
+                    {{#each this}}
+                        <h4>{{name}}</h4>
+                    {{/each}}
+                    <p>{{@key.title}}</p>
+                </div>
+            </a>
+        </div>
+    {{/each}}
+</div>
+
+{{/partial}}
+
+{{> layout.hbs}}
