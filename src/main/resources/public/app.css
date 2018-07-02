@@ -262,7 +262,7 @@ button {
   background-color: #f0f0f0;
 }
 
-.detail-main-panel h2 {
+.detail-main-panel h3 {
   margin: 10px 0;
 }
 
@@ -318,7 +318,7 @@ button {
 .btn-mini-delete {
   opacity: 0;
   height: 20px;
-  margin-left: 10px;
+  margin: -3px 0 0 10px;
   padding: 0 5px;
   background-color: #ff6372;
 }
@@ -326,7 +326,7 @@ button {
 .btn-mini-add {
   height: 20px;
   width: 20px;
-  margin-left: 10px;
+  margin: -3px 0 0 10px;
   padding: 0;
   background-color: #88b9b8;
 }
@@ -336,7 +336,7 @@ button {
   background-color: #ff6372;
 }
 
-p:hover .btn-mini-delete, li:hover .btn-mini-delete {
+.deleteable:hover .btn-mini-delete {
   opacity: 1;
 }
 
